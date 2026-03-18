@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Install Packages
-PACK='vim python3 python3-pip python3-dev libssl-dev libffi-dev build-essential git wget checksec'
+PACK='vim python3 python3-pip python3-dev libssl-dev libffi-dev build-essential git wget checksec ruby'
 apt update -y
 apt install -y $PACK
 
@@ -13,6 +13,9 @@ pip3 install ropgadget
 
 # Install pwntools
 python3 -m pip install --upgrade pwntools
+
+# Install one_gadget
+gem install one_gadget
 
 # Clone PwnDocker
 git clone https://github.com/kmm2003/PwnDocker.git
